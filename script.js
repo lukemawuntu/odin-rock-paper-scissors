@@ -3,9 +3,6 @@ function getComputerChoice(){
   return choice[Math.floor(Math.random()*3)]
 }
 
-let playerSelection = prompt("Choose rock paper scissor").toLowerCase();
-let computerSelection = getComputerChoice();
-
 function playRound(playerSelection, computerSelection){
   if (playerSelection=="rock" && computerSelection=="rock"){
     return "Tie";
@@ -16,7 +13,7 @@ function playRound(playerSelection, computerSelection){
   else if (playerSelection=="rock" && computerSelection=="scissor"){
     return "You win";
   }
-  if (playerSelection=="paper" && computerSelection=="rock"){
+  else if (playerSelection=="paper" && computerSelection=="rock"){
     return "You win";
   }
   else if (playerSelection=="paper" && computerSelection=="paper"){
@@ -25,7 +22,7 @@ function playRound(playerSelection, computerSelection){
   else if (playerSelection=="paper" && computerSelection=="scissor"){
     return "You lose";
   }
-  if (playerSelection=="scissor" && computerSelection=="rock"){
+  else if (playerSelection=="scissor" && computerSelection=="rock"){
     return "You lose";
   }
   else if (playerSelection=="scissor" && computerSelection=="paper"){
@@ -35,5 +32,8 @@ function playRound(playerSelection, computerSelection){
     return "Tie";
   }
 }
+
+let playerSelection = prompt("Choose rock paper scissor").toLowerCase();
+let computerSelection = getComputerChoice();
 
 console.log(playRound(playerSelection,computerSelection))
