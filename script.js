@@ -6,32 +6,20 @@ function getComputerChoice(){
 let winCounter = 0;
 let loseCounter = 0;
 function playRound(playerSelection, computerSelection){
-  if (playerSelection=="rock" && computerSelection=="rock"){
+  if (playerSelection=="rock" && computerSelection=="rock" ||
+      playerSelection=="paper" && computerSelection=="paper" ||
+      playerSelection=="scissor" && computerSelection=="scissor"){
     return "Tie";
   }
-  else if (playerSelection=="rock" && computerSelection=="paper"){
+  else if (playerSelection=="rock" && computerSelection=="paper" ||
+          playerSelection=="paper" && computerSelection=="scissor" ||
+          playerSelection=="scissor" && computerSelection=="rock"){
     return loseCounter++;
   }
-  else if (playerSelection=="rock" && computerSelection=="scissor"){
+  else if (playerSelection=="rock" && computerSelection=="scissor" ||
+          playerSelection=="paper" && computerSelection=="rock" ||
+          playerSelection=="scissor" && computerSelection=="paper"){
     return winCounter++;
-  }
-  else if (playerSelection=="paper" && computerSelection=="rock"){
-    return winCounter++;
-  }
-  else if (playerSelection=="paper" && computerSelection=="paper"){
-    return "Tie";
-  }
-  else if (playerSelection=="paper" && computerSelection=="scissor"){
-    return loseCounter++;
-  }
-  else if (playerSelection=="scissor" && computerSelection=="rock"){
-    return loseCounter++;
-  }
-  else if (playerSelection=="scissor" && computerSelection=="paper"){
-    return winCounter++;
-  }
-   else if (playerSelection=="scissor" && computerSelection=="scissor"){
-    return "Tie";
   }
 }
 
