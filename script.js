@@ -51,5 +51,5 @@ while (true){
 }
 
 (winCounter>loseCounter)
-? console.log("You win!")
-: console.log("You lose.")
+? console.log("You won! Reload to play again")
+: console.log("You lost. Reload to play again.")
