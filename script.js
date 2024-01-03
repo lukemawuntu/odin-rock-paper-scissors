@@ -64,17 +64,3 @@ paper.addEventListener('click', playPaper);
 
 const scissor = document.querySelector("#scissor")
 scissor.addEventListener('click', playScissor);
-
-if(winCounter===5){
-  console.log("You won.")};
-
-// while (0){
-//   game()
-//   if (winCounter==3 || loseCounter==3){
-//     break;
-//   }
-// }
-
-(winCounter>loseCounter)
-? console.log("You won! Reload to play again")
-: console.log("You lost. Reload to play again.")
