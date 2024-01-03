@@ -23,6 +23,15 @@ function playRound(playerSelection, computerSelection){
   }
 }
 
+const rock = document.querySelector("#rock")
+rock.addEventListener('click',()=>{
+  playerSelection='rock';
+  computerSelection=getComputerChoice();
+  playRound(playerSelection,computerSelection)
+  console.log(playerSelection,computerSelection)
+})
+
+
 function game(){
   let playerSelection = prompt("Choose rock paper scissor").toLowerCase();
   let computerSelection = getComputerChoice();
