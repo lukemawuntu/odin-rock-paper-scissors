@@ -23,20 +23,6 @@ function playRound(playerSelection, computerSelection){
   }
 }
 
-//if statement execute when counter<5
-//if counter=5 stop.
-//condition = true;
-//if (counter<5), condition = true
-//else condition=false
-
-// function gameConditions(winCounter,loseCounter){
-//   if (winCounter<5 && loseCounter<5){
-//     return true;
-//   } else{
-//     return false;
-//   }
-// }
-
 function resultFunc(winCounter,loseCounter){
   if (winCounter>loseCounter) {
     result.textContent="You WON";
