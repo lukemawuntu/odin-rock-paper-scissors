@@ -26,25 +26,31 @@ function playRound(playerSelection, computerSelection){
 function playRock(){
   playerSelection='rock';
   computerSelection=getComputerChoice();
-  playRound(playerSelection,computerSelection)
-  console.log(playerSelection,computerSelection)
-  text.textContent=`${winCounter}, ${loseCounter}`
+  if (winCounter<5 && loseCounter<5){
+    playRound(playerSelection,computerSelection)
+    console.log(playerSelection,computerSelection)
+    text.textContent=`${winCounter}, ${loseCounter}`
+  }
 }
 
 function playPaper(){
   playerSelection='paper';
   computerSelection=getComputerChoice();
-  playRound(playerSelection,computerSelection)
-  console.log(playerSelection,computerSelection)
-  text.textContent=`${winCounter}, ${loseCounter}`
+    if (winCounter<5 && loseCounter<5){
+    playRound(playerSelection,computerSelection)
+    console.log(playerSelection,computerSelection)
+    text.textContent=`${winCounter}, ${loseCounter}`
+    }
 }
 
 function playScissor(){
   playerSelection='scissor';
   computerSelection=getComputerChoice();
-  playRound(playerSelection,computerSelection)
-  console.log(playerSelection,computerSelection)
-  text.textContent=`${winCounter}, ${loseCounter}`
+  if (winCounter<5 && loseCounter<5){
+    playRound(playerSelection,computerSelection)
+    console.log(playerSelection,computerSelection)
+    text.textContent=`${winCounter}, ${loseCounter}`
+  }
 }
 
 
@@ -59,6 +65,8 @@ paper.addEventListener('click', playPaper);
 const scissor = document.querySelector("#scissor")
 scissor.addEventListener('click', playScissor);
 
+if(winCounter===5){
+  console.log("You won.")};
 
 // while (0){
 //   game()
