@@ -28,7 +28,6 @@ function playRock(){
   computerSelection=getComputerChoice();
   if (winCounter<5 && loseCounter<5){
     playRound(playerSelection,computerSelection)
-    console.log(playerSelection,computerSelection)
     text.textContent=`${winCounter}, ${loseCounter}`
   }
 }
@@ -38,7 +37,6 @@ function playPaper(){
   computerSelection=getComputerChoice();
     if (winCounter<5 && loseCounter<5){
     playRound(playerSelection,computerSelection)
-    console.log(playerSelection,computerSelection)
     text.textContent=`${winCounter}, ${loseCounter}`
     }
 }
@@ -48,7 +46,6 @@ function playScissor(){
   computerSelection=getComputerChoice();
   if (winCounter<5 && loseCounter<5){
     playRound(playerSelection,computerSelection)
-    console.log(playerSelection,computerSelection)
     text.textContent=`${winCounter}, ${loseCounter}`
   }
 }
