@@ -68,11 +68,22 @@ function playScissor(){
 const text = document.querySelector("#text")
 const result = document.querySelector("#result")
 
-const rock = document.querySelector("#rock")
-rock.addEventListener('click', playRock);
+let btnContainer = document.querySelector("#button-container")
 
-const paper = document.querySelector("#paper")
-paper.addEventListener('click', playPaper);
+btnContainer.addEventListener('click', (e)=>{
+  let target = e.target;
 
-const scissor = document.querySelector("#scissor")
-scissor.addEventListener('click', playScissor);
+  switch (target.id) {
+    case "rock":
+      playRock();
+      break;
+    case "paper":
+      playPaper();
+      break;
+    case "scissor":
+      playScissor();
+      break; 
+    default:
+      break;
+  }
+});
