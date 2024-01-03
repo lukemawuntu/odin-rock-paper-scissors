@@ -31,59 +31,23 @@ function resultFunc(winCounter,loseCounter){
   }
 }
 
-function playRock(){
-  playerSelection='rock';
-  computerSelection=getComputerChoice();
+function game(playerSelection){
+  const computerSelection=getComputerChoice();
   if (winCounter<5 && loseCounter<5){
-  playRound(playerSelection,computerSelection)
-    text.textContent=`User Score: ${winCounter}, Computer Score: ${loseCounter}`
-  }else{
-    resultFunc(winCounter,loseCounter);
-  }
+    playRound(playerSelection,computerSelection)
+      text.textContent=`User Score: ${winCounter}, Computer Score: ${loseCounter}`
+    } else{
+      resultFunc(winCounter,loseCounter);
+    }
 }
-
-function playPaper(){
-  playerSelection='paper';
-  computerSelection=getComputerChoice();
-  if (winCounter<5 && loseCounter<5){
-  playRound(playerSelection,computerSelection)
-    text.textContent=`User Score: ${winCounter}, Computer Score: ${loseCounter}`
-  }else{
-    resultFunc(winCounter,loseCounter);
-  }
-}
-
-function playScissor(){
-  playerSelection='scissor';
-  computerSelection=getComputerChoice();
-  if (winCounter<5 && loseCounter<5){
-  playRound(playerSelection,computerSelection)
-    text.textContent=`User Score: ${winCounter}, Computer Score: ${loseCounter}`
-  } else{
-    resultFunc(winCounter,loseCounter);
-  }
-}
-
 
 const text = document.querySelector("#text")
 const result = document.querySelector("#result")
 
 let btnContainer = document.querySelector("#button-container")
-
-btnContainer.addEventListener('click', (e)=>{
+btnContainer.addEventListener('click',(e)=>{
   let target = e.target;
-
-  switch (target.id) {
-    case "rock":
-      playRock();
-      break;
-    case "paper":
-      playPaper();
-      break;
-    case "scissor":
-      playScissor();
-      break; 
-    default:
-      break;
+  if (target.tagName=== 'BUTTON'){
+    game(target.id);
   }
-});
+})
