@@ -29,23 +29,7 @@ rock.addEventListener('click',()=>{
   computerSelection=getComputerChoice();
   playRound(playerSelection,computerSelection)
   console.log(playerSelection,computerSelection)
-})
-
-
-function game(){
-  let playerSelection = prompt("Choose rock paper scissor").toLowerCase();
-  let computerSelection = getComputerChoice();
-  playRound(playerSelection, computerSelection)
-  console.log(`You = ${playerSelection} || Computer = ${computerSelection}`)
-  console.log(`Win = ${winCounter} || Lose = ${loseCounter}`)
-}
-
-while (true){
-  game();
-  if (winCounter==3 || loseCounter==3){
-    break;
-  }
-}
+});
 
 (winCounter>loseCounter)
 ? console.log("You won! Reload to play again")
