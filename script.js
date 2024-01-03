@@ -37,6 +37,14 @@ function playRound(playerSelection, computerSelection){
 //   }
 // }
 
+function resultFunc(winCounter,loseCounter){
+  if (winCounter>loseCounter) {
+    result.textContent="You WON";
+  } else{
+    result.textContent="You LOST";
+  }
+}
+
 function playRock(){
   playerSelection='rock';
   computerSelection=getComputerChoice();
@@ -48,7 +56,7 @@ function playRock(){
   playRound(playerSelection,computerSelection)
     text.textContent=`User Score: ${winCounter}, Computer Score: ${loseCounter}`
   }else{
-    result.textContent='STOP'
+    resultFunc(winCounter,loseCounter);
   }
 }
 
@@ -63,7 +71,7 @@ function playPaper(){
   playRound(playerSelection,computerSelection)
     text.textContent=`User Score: ${winCounter}, Computer Score: ${loseCounter}`
   }else{
-    result.textContent='STOP'
+    resultFunc(winCounter,loseCounter);
   }
 }
 
@@ -78,7 +86,7 @@ function playScissor(){
   playRound(playerSelection,computerSelection)
     text.textContent=`User Score: ${winCounter}, Computer Score: ${loseCounter}`
   } else{
-    result.textContent='STOP'
+    resultFunc(winCounter,loseCounter);
   }
 }
 
