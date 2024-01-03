@@ -48,11 +48,7 @@ function resultFunc(winCounter,loseCounter){
 function playRock(){
   playerSelection='rock';
   computerSelection=getComputerChoice();
-  let gameCondition=false;
   if (winCounter<5 && loseCounter<5){
-    gameCondition = true;
-  }
-  if (gameCondition==true){
   playRound(playerSelection,computerSelection)
     text.textContent=`User Score: ${winCounter}, Computer Score: ${loseCounter}`
   }else{
@@ -63,11 +59,7 @@ function playRock(){
 function playPaper(){
   playerSelection='paper';
   computerSelection=getComputerChoice();
-  let gameCondition=false;
   if (winCounter<5 && loseCounter<5){
-    gameCondition = true;
-  }
-  if (gameCondition==true){
   playRound(playerSelection,computerSelection)
     text.textContent=`User Score: ${winCounter}, Computer Score: ${loseCounter}`
   }else{
@@ -78,11 +70,7 @@ function playPaper(){
 function playScissor(){
   playerSelection='scissor';
   computerSelection=getComputerChoice();
-  let gameCondition=false;
   if (winCounter<5 && loseCounter<5){
-    gameCondition = true;
-  }
-  if (gameCondition==true){
   playRound(playerSelection,computerSelection)
     text.textContent=`User Score: ${winCounter}, Computer Score: ${loseCounter}`
   } else{
