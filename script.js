@@ -23,35 +23,68 @@ function playRound(playerSelection, computerSelection){
   }
 }
 
+//if statement execute when counter<5
+//if counter=5 stop.
+//condition = true;
+//if (counter<5), condition = true
+//else condition=false
+
+// function gameConditions(winCounter,loseCounter){
+//   if (winCounter<5 && loseCounter<5){
+//     return true;
+//   } else{
+//     return false;
+//   }
+// }
+
 function playRock(){
   playerSelection='rock';
   computerSelection=getComputerChoice();
+  let gameCondition=false;
   if (winCounter<5 && loseCounter<5){
-    playRound(playerSelection,computerSelection)
-    text.textContent=`${winCounter}, ${loseCounter}`
+    gameCondition = true;
+  }
+  if (gameCondition==true){
+  playRound(playerSelection,computerSelection)
+    text.textContent=`User Score: ${winCounter}, Computer Score: ${loseCounter}`
+  }else{
+    result.textContent='STOP'
   }
 }
 
 function playPaper(){
   playerSelection='paper';
   computerSelection=getComputerChoice();
-    if (winCounter<5 && loseCounter<5){
-    playRound(playerSelection,computerSelection)
-    text.textContent=`${winCounter}, ${loseCounter}`
-    }
+  let gameCondition=false;
+  if (winCounter<5 && loseCounter<5){
+    gameCondition = true;
+  }
+  if (gameCondition==true){
+  playRound(playerSelection,computerSelection)
+    text.textContent=`User Score: ${winCounter}, Computer Score: ${loseCounter}`
+  }else{
+    result.textContent='STOP'
+  }
 }
 
 function playScissor(){
   playerSelection='scissor';
   computerSelection=getComputerChoice();
+  let gameCondition=false;
   if (winCounter<5 && loseCounter<5){
-    playRound(playerSelection,computerSelection)
-    text.textContent=`${winCounter}, ${loseCounter}`
+    gameCondition = true;
+  }
+  if (gameCondition==true){
+  playRound(playerSelection,computerSelection)
+    text.textContent=`User Score: ${winCounter}, Computer Score: ${loseCounter}`
+  } else{
+    result.textContent='STOP'
   }
 }
 
 
 const text = document.querySelector("#text")
+const result = document.querySelector("#result")
 
 const rock = document.querySelector("#rock")
 rock.addEventListener('click', playRock);
