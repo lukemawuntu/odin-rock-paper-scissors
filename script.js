@@ -28,6 +28,7 @@ function playRock(){
   computerSelection=getComputerChoice();
   playRound(playerSelection,computerSelection)
   console.log(playerSelection,computerSelection)
+  text.textContent=`${winCounter}, ${loseCounter}`
 }
 
 function playPaper(){
@@ -35,6 +36,7 @@ function playPaper(){
   computerSelection=getComputerChoice();
   playRound(playerSelection,computerSelection)
   console.log(playerSelection,computerSelection)
+  text.textContent=`${winCounter}, ${loseCounter}`
 }
 
 function playScissor(){
@@ -42,7 +44,11 @@ function playScissor(){
   computerSelection=getComputerChoice();
   playRound(playerSelection,computerSelection)
   console.log(playerSelection,computerSelection)
+  text.textContent=`${winCounter}, ${loseCounter}`
 }
+
+
+const text = document.querySelector("#text")
 
 const rock = document.querySelector("#rock")
 rock.addEventListener('click', playRock);
@@ -52,6 +58,14 @@ paper.addEventListener('click', playPaper);
 
 const scissor = document.querySelector("#scissor")
 scissor.addEventListener('click', playScissor);
+
+
+// while (0){
+//   game()
+//   if (winCounter==3 || loseCounter==3){
+//     break;
+//   }
+// }
 
 (winCounter>loseCounter)
 ? console.log("You won! Reload to play again")
