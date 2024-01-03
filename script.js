@@ -23,13 +23,35 @@ function playRound(playerSelection, computerSelection){
   }
 }
 
-const rock = document.querySelector("#rock")
-rock.addEventListener('click',()=>{
+function playRock(){
   playerSelection='rock';
   computerSelection=getComputerChoice();
   playRound(playerSelection,computerSelection)
   console.log(playerSelection,computerSelection)
-});
+}
+
+function playPaper(){
+  playerSelection='paper';
+  computerSelection=getComputerChoice();
+  playRound(playerSelection,computerSelection)
+  console.log(playerSelection,computerSelection)
+}
+
+function playScissor(){
+  playerSelection='scissor';
+  computerSelection=getComputerChoice();
+  playRound(playerSelection,computerSelection)
+  console.log(playerSelection,computerSelection)
+}
+
+const rock = document.querySelector("#rock")
+rock.addEventListener('click', playRock);
+
+const paper = document.querySelector("#paper")
+paper.addEventListener('click', playPaper);
+
+const scissor = document.querySelector("#scissor")
+scissor.addEventListener('click', playScissor);
 
 (winCounter>loseCounter)
 ? console.log("You won! Reload to play again")
